@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teachers' Day | Message Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div>
+      <span class="eyebrow">A little thank-you card</span>
+      <h1>Happy Teachers' Day! 🍎</h1>
+    </div>
+    <button class="ghost-btn" id="editTopBtn">Customize Card</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="intro">
+        <p class="tag">FOR A WONDERFUL TEACHER</p>
+        <h2>A card that opens <span>like a book.</span></h2>
+        <p>
+          Add your own teacher's name, message, photo, and a personal audio greeting.
+          Then open the card and send your appreciation.
+        </p>
+        <div class="hint">💡 Tip: Click the cover, or use the button below.</div>
+      </div>
+
+      <div class="card-stage">
+        <div class="book" id="book" tabindex="0" aria-label="Interactive Teachers' Day card">
+          <div class="book-page back-page">
+            <div class="inside-left">
+              <div class="photo-frame">
+                <img id="previewPhoto" alt="Teacher photo preview">
+                <div id="photoPlaceholder" class="photo-placeholder">📷<br><span>Add a photo</span></div>
+              </div>
+              <p class="small-note">A special memory for a special teacher.</p>
+            </div>
+          </div>
+
+          <div class="book-page right-page">
+            <div class="inside-content">
+              <span class="mini-label">WITH GRATITUDE</span>
+              <h3>Dear <span id="cardTeacher">Teacher</span>,</h3>
+              <p id="cardMessage">
+                Thank you for your patience, guidance, and kindness. You inspire us to keep learning,
+                keep trying, and believe in ourselves. Your lessons reach far beyond the classroom.
+              </p>
+              <p class="signature">With appreciation,<br><strong id="cardSender">Your Student</strong> 💛</p>
+
+              <div class="audio-box" id="audioBox">
+                <div>
+                  <span class="audio-icon">♫</span>
+                  <div>
+                    <strong>Personal audio greeting</strong>
+                    <small id="audioName">No audio added yet</small>
+                  </div>
+                </div>
+                <audio id="audioPlayer" controls></audio>
+              </div>
+            </div>
+          </div>
+
+          <button class="cover" id="cover" type="button">
+            <div class="cover-shine"></div>
+            <div class="cover-inner">
+              <span class="apple">🍎</span>
+              <span class="cover-small">A SPECIAL MESSAGE FOR</span>
+              <h2 id="coverTeacher">My Teacher</h2>
+              <div class="ornament">✦ ── ✦ ── ✦</div>
+              <p>Happy Teachers' Day</p>
+              <span class="open-label">CLICK TO OPEN</span>
+            </div>
+          </button>
+        </div>
+
+        <button class="open-btn" id="openBtn">Open / Close Card</button>
+      </div>
+    </section>
+
+    <section class="customizer" id="customizer">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MAKE IT YOURS</span>
+          <h2>Customize your message</h2>
+        </div>
+        <button class="close-edit" id="closeEditBtn">Hide</button>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Teacher's name
+          <input id="teacherInput" type="text" value="Teacher" maxlength="45" placeholder="e.g. Ms. Santos">
+        </label>
+
+        <label>
+          Your name
+          <input id="senderInput" type="text" value="Your Student" maxlength="45" placeholder="Your name">
+        </label>
+
+        <label class="full">
+          Personal message
+          <textarea id="messageInput" rows="6" maxlength="700">Thank you for your patience, guidance, and kindness. You inspire us to keep learning, keep trying, and believe in ourselves. Your lessons reach far beyond the classroom.</textarea>
+          <span class="counter"><span id="messageCount">0</span>/700</span>
+        </label>
+
+        <label>
+          Teacher photo
+          <input id="photoInput" type="file" accept="image/*">
+          <span class="file-help">JPG, PNG, WEBP, etc.</span>
+        </label>
+
+        <label>
+          Audio greeting
+          <input id="audioInput" type="file" accept="audio/*">
+          <span class="file-help">MP3, WAV, M4A, OGG, etc.</span>
+        </label>
+      </div>
+
+      <div class="custom-actions">
+        <button class="primary-btn" id="applyBtn">Apply Changes ✨</button>
+        <button class="secondary-btn" id="confettiBtn">Celebrate 🎉</button>
+        <button class="secondary-btn" id="resetBtn">Reset</button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><span>📖</span><div><strong>Book-style flip</strong><p>Open the cover with a smooth 3D page effect.</p></div></div>
+      <div class="feature"><span>📸</span><div><strong>Add a photo</strong><p>Upload a teacher photo and preview it instantly.</p></div></div>
+      <div class="feature"><span>🎵</span><div><strong>Add audio</strong><p>Attach a personal voice greeting or song.</p></div></div>
+      <div class="feature"><span>✨</span><div><strong>Animated effects</strong><p>Enjoy floating sparkles and a celebration effect.</p></div></div>
+    </section>
+  </main>
+
+  <footer>Made with HTML, CSS & JavaScript • Teachers' Day Message Card</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
